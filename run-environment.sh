@@ -1,0 +1,2 @@
+docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
