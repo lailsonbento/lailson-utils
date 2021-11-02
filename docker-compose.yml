@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    ports:
+      - '9000:9000'
+    restart: always
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_PASSWORD=postgres
