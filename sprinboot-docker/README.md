@@ -1,0 +1,1 @@
+### Docker-compose script to run springboot application with image built by maven
